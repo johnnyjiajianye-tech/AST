@@ -30,4 +30,5 @@ public abstract class TSocketCanviEstats extends TSocket{
     
     public abstract void inicia();
     public abstract void espera();
+    
 }

@@ -51,9 +51,11 @@ public class TSocketCanviEstats1 extends TSocketCanviEstats{
         mon.lock();
         try{
             throw new RuntimeException("Part a completar");
-
-
+           while(estat != ESTAT_TANCAT){
+                .await();
+            }
             
+            estat = ESTAT_ENV_INICI;
             
             
             
@@ -69,10 +71,10 @@ public class TSocketCanviEstats1 extends TSocketCanviEstats{
         try{
             throw new RuntimeException("Part a completar");
             
- 
-            
-            
-        
+            while(estat != ESTAT_TANC){
+                .await();
+            }
+            estat = ESTAT_ESP;
         } catch (Exception ex) { System.out.println(ex); }
         finally{
             mon.unlock();
